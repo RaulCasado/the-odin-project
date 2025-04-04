@@ -8,11 +8,11 @@ You can preview the project [here](https://rcasado.me/the-odin-project/javascrip
 
 ## Overview
 
-This project allows two players to compete in a simple Tic Tac Toe game. Players can enter their names, take turns marking the board, and the game displays the result when a win or tie occurs.
+This project allows one players to compete in a simple Tic Tac Toe game. Players can take turns marking the board, and the game displays the result when a win or tie occurs.
 
 ## Features
 
-- Two-player game mode.
+- Single game mode.
 - Dynamic board rendering and state management.
 - Victory and tie detection.
 - Option to restart the game.
