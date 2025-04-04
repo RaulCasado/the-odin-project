@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch Digital</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .controls {
+            margin: 20px;
+            gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            width: 600px;
+            height: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            border: 2px solid #333;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .grid-item {
+            box-sizing: border-box;
+            border: 1px solid #eee;
+        }
+
+        .active {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Etch-a-Sketch Digital</h1>
+    <div class="controls">
+        <button onclick="changeSize()">Grid Size</button>
+        <button onclick="clearGrid()">Clear</button>
+        <button id="colorMode" class="active" onclick="setMode('color')">Black</button>
+        <button id="randomMode" onclick="setMode('random')">Random Color</button>
+        <button id="darkenMode" onclick="setMode('darken')">Darken</button>
+    </div>
+    <div class="container" id="gridContainer"></div>
+
+    <script>
+        let currentMode = 'color';
+        let currentColor = '#333333';
+        
+        function createGrid(size) {
+            const container = document.getElementById('gridContainer');
+            container.innerHTML = '';
+            
+            const cellSize = 600 / size;
+            
+            for (let i = 0; i < size * size; i++) {
+                const cell = document.createElement('div');
+                cell.className = 'grid-item';
+                cell.style.width = `${cellSize}px`;
+                cell.style.height = `${cellSize}px`;
+                cell.dataset.darkness = 0;
+                
+                cell.addEventListener('mouseover', handleHover);
+                container.appendChild(cell);
+            }
+        }
+
+        const modeActions = {
+            color(e) {
+                e.target.style.backgroundColor = '#000000';
+                e.target.dataset.darkness = 10;
+            },
+            random(e) {
+             e.target.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            },
+            darken(e) {
+                const darkness = parseInt(e.target.dataset.darkness);
+                darkness < 10 && (
+                    e.target.dataset.darkness = darkness + 1,
+                    e.target.style.backgroundColor = `rgba(0, 0, 0, ${(darkness + 1) * 0.1})`
+            );
+            },
+        };
+
+        function handleHover(e) {
+            modeActions[currentMode]?.(e);
+        }
+
+        function changeSize() {
+            let newSize = prompt('Enter the number of squares per side (1-100):', 16);
+            newSize = parseInt(newSize);
+            
+            if (newSize && newSize > 0 && newSize <= 100) {
+                createGrid(newSize);
+            } else {
+                alert('Please enter a valid number between 1 and 100');
+            }
+        }
+
+        function clearGrid() {
+            const cells = document.getElementsByClassName('grid-item');
+            Array.from(cells).forEach(cell => {
+                cell.style.backgroundColor = '';
+                cell.dataset.darkness = 0;
+            });
+        }
+
+        function setMode(mode) {
+            currentMode = mode;
+            document.querySelectorAll('.controls button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(`${mode}Mode`).classList.add('active');
+        }
+
+        // By default 16x16 grid
+        createGrid(16);
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1rem;
+    background-color: #f0f0f0;
+}
+
+.library-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.book-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.book-card h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.book-card p {
+    margin: 0.3rem 0;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-show-dialog {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.dialog {
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Estilos responsive para móvil */
+@media (max-width: 600px) {
+    body {
+        padding: 0.5rem;
+    }
+    .library-container {
+        grid-template-columns: 1fr;
+    }
+    .book-card {
+        padding: 0.8rem;
+    }
+}

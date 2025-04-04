@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-dark-bg: #1F2937;
+            --color-light-bg: #E5E7EB;
+            --color-accent: #3882F6;
+            --color-text: #F9FAF8;
+            --color-secondary-text: #E5E7EB;
+            --color-muted: #4b5563;
+            --font-family: 'Roboto', sans-serif;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+        }
+
+        .dark-bg {
+            background-color: var(--color-dark-bg);
+            padding: 1.25rem 0;
+        }
+
+        nav {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: var(--color-text);
+            font-weight: 900;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-secondary-text);
+            font-size: 1.125rem;
+        }
+
+        .hero {
+            background-color: var(--color-dark-bg);
+            padding: 6.25rem 0;
+        }
+
+        .hero-container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-image {
+            flex: 1;
+            background-color: #6d747d;
+            height: 15.625rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-secondary-text);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--color-secondary-text);
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            background-color: var(--color-accent);
+            color: #fff;
+            padding: 0.5rem 2.25rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.125rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .info {
+            padding: 3rem 0 6rem;
+        }
+
+        .info h2 {
+            text-align: center;
+            font-size: 2.25rem;
+            color: var(--color-dark-bg);
+            font-weight: 900;
+            margin-bottom: 3rem;
+        }
+
+        .cards-container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+        }
+
+        .card {
+            width: 10rem;
+            text-align: center;
+        }
+
+        .card-image {
+            width: 10rem;
+            height: 10rem;
+            border: 0.25rem solid var(--color-accent);
+            border-radius: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--color-muted);
+        }
+
+        .quote-section {
+            background-color: var(--color-light-bg);
+            padding: 6rem 0;
+        }
+
+        .quote-container {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .quote-text {
+            font-size: 2.25rem;
+            font-style: italic;
+            color: var(--color-dark-bg);
+            font-weight: 300;
+        }
+
+        .quote-author {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 1rem;
+        }
+
+        .cta-section {
+            padding: 6rem 0;
+        }
+
+        .cta-container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: var(--color-accent);
+            border-radius: 0.5rem;
+            padding: 3rem 6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cta-text h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .cta-text p {
+            color: var(--color-secondary-text);
+        }
+
+        .cta-btn {
+            border: 0.125rem solid #fff;
+            background-color: transparent;
+        }
+
+        footer {
+            background-color: var(--color-dark-bg);
+            color: var(--color-secondary-text);
+            text-align: center;
+            padding: 2.25rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="dark-bg">
+        <nav>
+            <div class="logo">Header Logo</div>
+            <ul class="nav-links">
+                <li><a href="#">header link one</a></li>
+                <li><a href="#">header link two</a></li>
+                <li><a href="#">header link three</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero dark-bg">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>This website is awesome</h1>
+                    <p>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast.</p>
+                    <button class="btn">Sign up</button>
+                </div>
+                <div class="hero-image">
+                    this is a placeholder for an image
+                </div>
+            </div>
+        </section>
+
+        <section class="info">
+            <h2>Some random information.</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-image"></div>
+                    <p>this is some subtext under an illustration or image</p>
+                </div>
+                <div class="card">
+                    <div class="card-image"></div>
+                    <p>this is some subtext under an illustration or image</p>
+                </div>
+                <div class="card">
+                    <div class="card-image"></div>
+                    <p>this is some subtext under an illustration or image</p>
+                </div>
+                <div class="card">
+                    <div class="card-image"></div>
+                    <p>this is some subtext under an illustration or image</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.</p>
+                <p class="quote-author">-Thor, God of Thunder</p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-text">
+                    <h3>Call to action! It's time!</h3>
+                    <p>Sign up for our product by clicking that button right over there!</p>
+                </div>
+                <button class="btn cta-btn">Sign up</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © The Odin Project 2023</p>
+    </footer>
+</body>
+</html>

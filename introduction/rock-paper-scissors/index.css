@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.screen {
+    text-align: center;
+    background-color: #fff;
+    padding: 1.88rem;
+    border-radius: 0.63rem;
+    box-shadow: 0 0 0.63rem rgba(0, 0, 0, 0.1);
+    min-width: 31.25rem;
+    max-width: 50rem;
+    width: 90%;
+    transition: height 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 0.75rem 1.56rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.31rem;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin: 0.94rem 0.31rem;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.game-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    min-height: 25rem;
+}
+
+.results-container {
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 12.5rem;
+    position: relative;
+}
+
+.results-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12.5rem;
+    color: #6c757d;
+    font-style: italic;
+    border: 0.125rem dashed #dee2e6;
+    border-radius: 0.5rem;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 0.94rem;
+    padding: 0.94rem 0;
+    background: white;
+}
+
+.result {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+    min-height: 8.75rem;
+}
+
+.result p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.final-result {
+    padding: 2rem;
+    background: #e9ecef;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    min-height: 8.75rem;
+}
+
+.final-result h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.replay {
+    margin-top: 1.56rem;
+    background-color: #28a745;
+}
+
+.replay:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,109 @@
+:root {
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --primary-color: #2c3e50;
+    --card-background: white;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --button-background: #2c3e50;
+    --button-text: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #121212;
+        --text-color: #e0e0e0;
+        --primary-color: #bb86fc;
+        --card-background: #1e1e1e;
+        --card-shadow: rgba(0, 0, 0, 0.5);
+        --button-background: #bb86fc;
+        --button-text: #121212;
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 1.25rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2.5rem;
+}
+
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.875rem;
+    justify-content: center;
+}
+
+.recipe-card {
+    text-decoration: none;
+    color: var(--text-color);
+    width: 18.75rem;
+    background: var(--card-background);
+    border-radius: 0.625rem;
+    overflow: hidden;
+    box-shadow: 0 0.125rem 0.3125rem var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-0.3125rem);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 12.5rem;
+    object-fit: cover;
+}
+
+.recipe-card h2 {
+    text-align: center;
+    padding: 0.9375rem;
+    margin: 0;
+    background: var(--background-color);
+}
+
+.recipe-image {
+    width: 100%;
+    max-height: 25rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin: 1.25rem 0;
+}
+
+.content {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    background: var(--button-background);
+    color: var(--button-text);
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    margin-top: 1.875rem;
+}
+
+ul,
+ol {
+    padding-left: 1.25rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}

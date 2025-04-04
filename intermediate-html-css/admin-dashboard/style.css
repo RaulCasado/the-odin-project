@@ -1,0 +1,336 @@
+/* Reset y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #1992d4;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 8px;
+    border-bottom: 1px solid #1683be;
+}
+
+.logo-icon {
+    background-color: white;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.logo-square {
+    width: 24px;
+    height: 24px;
+    background-color: #1992d4;
+}
+
+.logo h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 8px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    background-color: #1683be;
+}
+
+.nav-item i {
+    width: 20px;
+}
+
+.nav-spacer {
+    height: 16px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+}
+
+/* Header */
+.header {
+    background-color: white;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.search-input {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f0f2f5;
+    font-size: 14px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #f0c14b;
+}
+
+.avatar.large {
+    width: 64px;
+    height: 64px;
+}
+
+.avatar.small {
+    width: 40px;
+    height: 40px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.username {
+    font-weight: 500;
+}
+
+/* Welcome Section */
+.welcome {
+    background-color: white;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.welcome-user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.welcome-text p {
+    font-size: 14px;
+}
+
+.welcome-text h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn {
+    background-color: #1992d4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1683be;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 24px;
+    padding: 24px;
+}
+
+/* Projects Section */
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #f0c14b;
+    min-height: 217px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content {
+    padding: 24px;
+    flex: 1;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    padding: 16px;
+}
+
+.card-actions button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.card-actions button:hover {
+    color: #333;
+}
+
+/* Announcements */
+.announcements-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-item {
+    padding: 16px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.announcement-item:last-child {
+    border-bottom: none;
+}
+
+.announcement-item h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.announcement-item p {
+    color: #666;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Trending */
+.trending {
+    margin-top: 24px;
+}
+
+.trending-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.trending-item:last-child {
+    margin-bottom: 0;
+}
+
+.trending-username {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.trending-project {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Colores de fondo para avatares */
+.red-bg {
+    background-color: #ffcdd2;
+}
+
+.orange-bg {
+    background-color: #ffe0b2;
+}
+
+.green-bg {
+    background-color: #c8e6c9;
+}
