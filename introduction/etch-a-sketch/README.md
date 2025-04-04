@@ -2,6 +2,10 @@
 
 This project recreates the classic Etch-a-Sketch drawing toy in a web browser.
 
+## Live Preview
+
+You can preview the project [here](https://rcasado.me/the-odin-project/introduction/etch-a-sketch/).
+
 ## Features
 - Grid-based drawing interface.
 - Multiple drawing modes: Black, Random Color, and Darken.

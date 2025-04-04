@@ -3,7 +3,8 @@
 A simple sign-up form built with HTML and CSS as part of the Odin Project curriculum. This project demonstrates a structured layout with responsive design principles and modern styling techniques.
 
 ## Live Preview
-Check out the live version at [https://rcasado.me/sign-up-form/](https://rcasado.me/sign-up-form/)
+
+You can preview the project [here](https://rcasado.me/the-odin-project/intermediate-html-css/sign-up/).
 
 ## Project Details
 - Responsive design optimized primarily for desktop.

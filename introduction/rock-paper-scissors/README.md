@@ -2,6 +2,10 @@
 
 A simple and fun Rock-Paper-Scissors game built using HTML, CSS, and JavaScript.
 
+## Live Preview
+
+You can preview the project [here](https://rcasado.me/the-odin-project/introduction/rock-paper-scissors/).
+
 ## Table of Contents
 
 - [Overview](#overview)

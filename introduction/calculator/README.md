@@ -6,6 +6,10 @@ A simple calculator application built with HTML, CSS, and JavaScript.
 
 This project implements a basic calculator supporting addition, subtraction, multiplication, and division. The user can interact with the calculator either by clicking on the on-screen buttons or using keyboard input.
 
+## Live Preview
+
+You can preview the project [here](https://rcasado.me/the-odin-project/introduction/calculator/).
+
 ## Features
 
 - Basic arithmetic operations: +, -, *, /

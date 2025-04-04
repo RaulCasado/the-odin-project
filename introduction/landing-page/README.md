@@ -2,6 +2,10 @@
 
 Welcome to the Odin Landing Page project! This project is a simple and elegant landing page created using HTML and CSS.
 
+## Live Preview
+
+You can preview the project [here](https://rcasado.me/the-odin-project/introduction/landing-page/).
+
 ## Table of Contents
 
 - [Introduction](#introduction)

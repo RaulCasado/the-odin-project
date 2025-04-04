@@ -2,6 +2,10 @@
 
 Welcome to Odin Recipes! This project is a collection of delicious recipes presented in a simple and elegant web format.
 
+## Live Preview
+
+You can preview the project [here](https://rcasado.me/the-odin-project/introduction/odin-recipes/).
+
 ## Table of Contents
 
 - [Introduction](#introduction)
